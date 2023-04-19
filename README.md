@@ -1,5 +1,7 @@
 # typst templates
 
+Personal templates for [Typst](https://github.com/typst/typst), a neat markdown-like typsetting system.
+
 I have the following directory structure for these:
 
 ```
@@ -38,3 +40,5 @@ Need fonts:
 - Fira Math
 - JetBrains Mono
 - Roboto
+
+Some settings are available in `main.typ`.
