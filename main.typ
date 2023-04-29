@@ -9,7 +9,7 @@
 #let me = "dogeystamp"
 
 #let font = "Roboto"
-#let heading_font = "JetBrains Mono"
+#let heading_font = "Roboto"
 #let math_font = "Fira Math"
 #let mono_font = "JetBrains Mono"
 
@@ -19,7 +19,7 @@
   // Set document metadata.
 
   align(center, {
-    text(size: large-size, weight: 700, title, font: heading_font)
+    text(size: large-size, weight: "black", title, font: heading_font)
   })
 }
 
@@ -54,9 +54,24 @@
   // Content to wrap
   body,
 ) = {
-  set text(size: normal-size, font: font, weight: "regular")
-  show math.equation: set text(font: math_font)
-  show heading: set text(font: heading_font)
+  set text(size: normal-size, font: font, weight: "light")
+  show math.equation: eq => text(font: math_font, eq)
+  show heading: set text(font: heading_font, weight: "black")
+  show raw.where(block: true): txt => pad(
+      left: 0.5em,
+      block(
+        radius: 0.5em,
+        stroke: luma(230),
+        fill: luma(245),
+        pad(
+          left: 1em,
+          right: 1em,
+          top: 1em,
+          bottom: 1em,
+          txt
+        )
+      )
+    )
 
   set page(
     paper: paper-size,
@@ -64,38 +79,9 @@
   set heading(numbering: "1.")
   set list(indent: 24pt, body-indent: 5pt)
   set enum(indent: 24pt, body-indent: 5pt)
-  show link: set text()
-
-  show math.equation: set block(below: 8pt, above: 9pt)
-  show math.equation: set text(weight: 400)
-
-  show figure: it => {
-    show: pad.with(x: 23pt)
-    set align(center)
-
-    v(12.5pt, weak: true)
-
-    // Display the figure's body.
-    it.body
-
-    // Display the figure's caption.
-    if it.has("caption") {
-      // Gap defaults to 17pt.
-      v(if it.has("gap") { it.gap } else { 17pt }, weak: true)
-      smallcaps[Figure]
-      if it.numbering != none {
-        [ #counter(figure).display(it.numbering)]
-      }
-      [. ]
-      it.caption
-    }
-
-    v(15pt, weak: true)
-  }
 
   // Configure paragraph properties.
-  set par(first-line-indent: 1.2em, justify: true, leading: 0.8em)
-  show par: set block(spacing: 2em)
+  set par(justify: true)
 
   // Display the article's contents.
   v(29pt, weak: true)

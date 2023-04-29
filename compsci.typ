@@ -6,7 +6,7 @@
 #let status(stat: "incomplete") = {
   if stat == "complete" {
     align(center, {
-      text(fill: rgb("#aadd44"))[
+      text(fill: rgb("#448d00"))[
         *Status*: Completed
       ]
     })
