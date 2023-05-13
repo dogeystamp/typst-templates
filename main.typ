@@ -55,6 +55,7 @@
   body,
 ) = {
   set text(size: normal-size, font: font, weight: "light")
+  show link: body => text(fill: rgb("#777777"), weight: "bold", body)
   show math.equation: eq => text(font: math_font, eq)
   show heading: set text(font: heading_font, weight: "black")
   show raw.where(block: true): txt => pad(
