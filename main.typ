@@ -78,8 +78,8 @@
     paper: paper-size,
   )
   set heading(numbering: "1.")
-  set list(indent: 24pt, body-indent: 5pt)
-  set enum(indent: 24pt, body-indent: 5pt)
+  set list(indent: 5pt, body-indent: 5pt)
+  set enum(indent: 5pt, body-indent: 5pt)
 
   // Configure paragraph properties.
   set par(justify: true)
