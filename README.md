@@ -15,6 +15,10 @@ docs/
     └── ...
 ```
 
+Personally, I set up templates as a git submodule, and docs as another git repo.
+
+## Example usage
+
 Example usage (this is test.typ in the above tree:)
 
 ```typ
