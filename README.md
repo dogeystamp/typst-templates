@@ -42,3 +42,7 @@ Need fonts:
 - Roboto
 
 Some settings are available in `main.typ`.
+
+## Screenshots
+
+![preview](https://raw.githubusercontent.com/dogeystamp/typst-templates/master/preview.jpg)
