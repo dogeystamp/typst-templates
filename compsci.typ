@@ -10,6 +10,12 @@
         *Status*: Completed
       ]
     })
+  } else if stat == "cheated" {
+    align(center, {
+      text(fill: rgb("#aaaa22"))[
+        *Status*: Solved with editorial
+      ]
+    })
   } else {
     align(center, {
       text(fill: rgb("#aa4422"))[
