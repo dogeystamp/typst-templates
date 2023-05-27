@@ -57,6 +57,7 @@
   set text(size: normal-size, font: font, weight: "light")
   show link: body => text(fill: rgb("#777777"), weight: "bold", body)
   show math.equation: eq => text(font: math_font, eq)
+  set table(inset: 10pt)
   show heading: set text(font: heading_font, weight: "black")
   show raw.where(block: true): txt => pad(
       left: 0.5em,
