@@ -8,10 +8,9 @@
 
 #let me = "dogeystamp"
 
-#let font = "Roboto"
-#let heading_font = "Roboto"
-#let math_font = "Fira Math"
-#let mono_font = "JetBrains Mono"
+#let font = "IBM Plex Sans"
+#let heading_font = "IBM Plex Sans"
+#let mono_font = "DejaVu Sans Mono"
 
 #let gen_title(
   title: none,
@@ -56,7 +55,7 @@
 ) = {
   set text(size: normal-size, font: font, weight: "light")
   show link: body => text(fill: rgb("#777777"), weight: "bold", body)
-  show math.equation: eq => text(font: math_font, eq)
+  show math.equation: eq => eq
   set table(inset: 10pt)
   show heading: set text(font: heading_font, weight: "black")
   show raw.where(block: true): txt => pad(

@@ -40,10 +40,7 @@ Example usage (this is test.typ in the above tree:)
 #source_code("test")
 ```
 
-Need fonts:
-- Fira Math
-- JetBrains Mono
-- Roboto
+Fonts should be included in Typst itself.
 
 Some settings are available in `main.typ`.
 
