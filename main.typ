@@ -6,11 +6,21 @@
 #let normal-size = 12pt
 #let large-size = 12pt
 
-#let me = "dogeystamp"
-
 #let font = "IBM Plex Sans"
 #let heading_font = "IBM Plex Sans"
 #let mono_font = "DejaVu Sans Mono"
+
+#let settings = yaml("/settings.yml")
+
+// reference based on TYPST_ROOT
+// use paths like "/problems/problem.pdf"
+// which will translate to "/home/user/docs/problems/problem.pdf"
+#let lref(
+  url,
+  text
+) = {
+  return link(settings.prefix + url, text)
+}
 
 #let gen_title(
   title: none,
@@ -28,7 +38,7 @@
   if authors == none {
     authors = (
       (
-        name: me,
+        name: settings.me,
       ),
     )
   }

@@ -1,6 +1,6 @@
 // general document
 
-#import "main.typ": gen_title, gen_authors, doc_template
+#import "main.typ": gen_title, gen_authors, doc_template, lref
 
 #let template(
   title: none,

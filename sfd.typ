@@ -1,6 +1,6 @@
 // templates for online lecture notes
 
-#import "main.typ": gen_title, gen_authors, doc_template, mono_font
+#import "main.typ": gen_title, gen_authors, doc_template, mono_font, lref
 
 #let template(
   title: none,

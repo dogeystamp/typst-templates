@@ -1,6 +1,6 @@
 // templates for compsci problem documents outside of contests
 
-#import "main.typ": gen_title, gen_authors, doc_template, mono_font
+#import "main.typ": gen_title, gen_authors, doc_template, mono_font, lref
 #import "compsci.typ": source_code, status
 
 #let template(
