@@ -16,10 +16,18 @@
 // use paths like "/problems/problem.pdf"
 // which will translate to "/home/user/docs/problems/problem.pdf"
 #let lref(
+  // whether or not to prepend 'pdfref://' to the link. as long as the handler
+  // is installed, it allows specifying the page number linked to
+  // see https://github.com/dogeystamp/pyinstantref for details
+  pdfref: false,
   url,
   text
 ) = {
-  return link(settings.prefix + url, text)
+  let realUrl = settings.prefix + url;
+  if (pdfref) {
+    realUrl = "pdfref://" + realUrl
+  }
+  return link(realUrl, text)
 }
 
 #let gen_title(
