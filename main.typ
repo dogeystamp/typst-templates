@@ -76,6 +76,7 @@
   show math.equation: eq => eq
   show figure: fig => {
     show: pad.with(x: 1em)
+    set image(width: 50%)
     set align(center)
     v(1em)
     fig.body
