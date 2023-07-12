@@ -74,6 +74,21 @@
   set text(size: normal-size, font: font, weight: "light")
   show link: body => text(fill: rgb("#777777"), weight: "bold", body)
   show math.equation: eq => eq
+  show figure: fig => {
+    show: pad.with(x: 1em)
+    set align(center)
+    v(1em)
+    fig.body
+    if fig.has("caption") {
+      v(1em, weak: true)
+      [Figure ]
+      if fig.numbering != none {
+        [#counter(figure).display(fig.numbering)]
+      }
+      [. ]
+      fig.caption
+    }
+  }
   set table(inset: 10pt)
   show heading: set text(font: heading_font, weight: "black")
   show raw.where(block: true): txt => pad(
