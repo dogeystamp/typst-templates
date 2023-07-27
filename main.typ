@@ -1,10 +1,10 @@
 // main template that everything inherits from
 
-#let script-size = 12pt
-#let footnote-size = 10pt
-#let small-size = 9pt
-#let normal-size = 12pt
-#let large-size = 12pt
+#let script-size = 9pt
+#let footnote-size = 8pt
+#let small-size = 8pt
+#let normal-size = 9pt
+#let large-size = 9pt
 
 #let font = "IBM Plex Sans"
 #let heading_font = "IBM Plex Sans"
@@ -71,7 +71,7 @@
   // Content to wrap
   body,
 ) = {
-  set text(size: normal-size, font: font, weight: "light")
+  set text(size: normal-size, font: font, weight: "regular")
   show link: body => text(fill: rgb("#777777"), weight: "bold", body)
   show math.equation: eq => eq
   show figure: fig => {
