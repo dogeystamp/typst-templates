@@ -92,6 +92,7 @@
   }
   set table(inset: 10pt)
   show heading: set text(font: heading_font, weight: "black")
+  set heading(numbering: "1.")
   show raw.where(block: true): txt => pad(
       left: 0.5em,
       block(
@@ -111,7 +112,6 @@
   set page(
     paper: paper-size,
   )
-  set heading(numbering: "1.")
   set list(indent: 5pt, body-indent: 5pt)
   set enum(indent: 5pt, body-indent: 5pt)
 

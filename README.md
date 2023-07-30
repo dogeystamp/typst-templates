@@ -69,3 +69,5 @@ Some settings are available in `main.typ`.
 ## Screenshots
 
 ![preview](https://raw.githubusercontent.com/dogeystamp/typst-templates/master/preview.jpg)
+
+Note that the font size is optimized for viewing the document fit to width on half a monitor.
