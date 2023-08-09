@@ -1,6 +1,6 @@
 // templates for compsci notes
 
-#import "main.typ": gen_title, gen_authors, doc_template, mono_font, lref
+#import "main.typ": gen_preamble, doc_template, mono_font, lref
 #import "compsci.typ": source_code
 
 #let template(
@@ -9,10 +9,12 @@
   body
 ) = {
   doc_template({
-    gen_title(title: title)
-    v(15pt, weak: true)
+    gen_preamble(
+      title: title,
+      authors: authors,
+      prefix: [_Algorithm notes_]
+    )
 
-    gen_authors(authors: authors)
     body
   })
 }

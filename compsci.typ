@@ -5,23 +5,17 @@
 // did i finish this problem?
 #let status(stat: "incomplete") = {
   if stat == "complete" {
-    align(center, {
-      text(fill: rgb("#448d00"))[
-        *Status*: Completed
-      ]
-    })
+    text(fill: rgb("#448d00"))[
+      *Status*: Completed
+    ]
   } else if stat == "cheated" {
-    align(center, {
-      text(fill: rgb("#aaaa22"))[
-        *Status*: Solved with editorial
-      ]
-    })
+    text(fill: rgb("#aaaa22"))[
+      *Status*: Solved with editorial
+    ]
   } else {
-    align(center, {
-      text(fill: rgb("#aa4422"))[
-        *Status*: Incomplete
-      ]
-    })
+    text(fill: rgb("#aa4422"))[
+      *Status*: Incomplete
+    ]
   }
 }
 

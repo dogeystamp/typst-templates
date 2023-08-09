@@ -34,10 +34,7 @@
   title: none,
 ) = {
   // Set document metadata.
-
-  align(center, {
-    text(size: large-size, weight: "black", title, font: heading_font)
-  })
+  text(size: 20pt, weight: "black", title, font: heading_font)
 }
 
 #let gen_authors(
@@ -57,10 +54,35 @@
     names.join(", ", last: ", and ")
   }
 
-  align(center, {
-    text(size: footnote-size, author-string)
-    v(25pt, weak: true)
+  text(author-string)
+}
+
+#let gen_preamble(
+  title: none,
+  authors: none,
+  prefix: none,
+  suffix: none,
+) = {
+  pad(left: -2%, {
+      gen_title(title: title)
+      v(13pt, weak: true)
+      pad(left: 1.5pt, prefix)
+      align(right,
+        rect(
+          width: 50%,
+          stroke: none,
+          {
+            [
+              #{gen_authors(authors: authors)}
+
+            ]
+            suffix
+        })
+      )
+      v(10pt)
+    line(length: 100%, stroke: 1pt + rgb("#555555"))
   })
+  v(5%, weak: true)
 }
 
 // this template sets up the document
