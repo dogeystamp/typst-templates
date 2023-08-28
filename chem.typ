@@ -8,8 +8,8 @@
 #let gaz = [$("g")$]
 #let sol = [$("s")$]
 
-#let chem = (body) => {
-  math.equation(block: true, math.upright(body))
+#let chem = (block: false, body) => {
+  math.equation(block: block, math.upright(body))
 }
 
 
