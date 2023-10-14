@@ -112,7 +112,7 @@
       fig.caption
     }
   }
-  set table(inset: 10pt)
+  set table(inset: 10pt, stroke: 0.5pt + black)
   show heading: set text(font: heading_font, weight: "black")
   set heading(numbering: "1.")
   show raw.where(block: true): txt => pad(
