@@ -88,7 +88,7 @@
 // this template sets up the document
 // but does not do things like title, authors, etc.
 #let doc_template(
-  paper-size: "a4",
+  paper-size: "us-letter",
 
   // Content to wrap
   body,
@@ -133,6 +133,7 @@
 
   set page(
     paper: paper-size,
+    margin: (top: 8%, rest: 10%),
   )
   set list(indent: 5pt, body-indent: 5pt)
   set enum(indent: 5pt, body-indent: 5pt)
