@@ -104,11 +104,6 @@
     fig.body
     if fig.has("caption") {
       v(1em, weak: true)
-      [Figure ]
-      if fig.numbering != none {
-        [#counter(figure).display(fig.numbering)]
-      }
-      [. ]
       fig.caption
     }
   }
