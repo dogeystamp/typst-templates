@@ -1,5 +1,12 @@
 // main template that everything inherits from
 
+#import "@preview/tablex:0.0.6": tablex
+
+#let tablef = tablex.with(
+  align: center + horizon,
+  auto-vlines: false
+)
+
 #let script-size = 9pt
 #let footnote-size = 8pt
 #let small-size = 8pt
@@ -93,7 +100,7 @@
   // Content to wrap
   body,
 ) = {
-  set text(size: normal-size, font: font, weight: "regular")
+  set text(size: normal-size, font: font, weight: "regular", lang: settings.lang)
   show link: body => text(fill: rgb("#777777"), weight: "bold", body)
   show math.equation: eq => eq
   show figure: fig => {

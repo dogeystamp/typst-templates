@@ -10,4 +10,5 @@ fi
 cat <<EOF > $1
 prefix: "$TYPST_ROOT"
 me: "$USER"
+lang: "en"
 EOF
