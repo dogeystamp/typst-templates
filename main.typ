@@ -96,6 +96,7 @@
   set text(size: normal-size, font: font, weight: "regular", lang: settings.lang)
   show link: body => text(fill: rgb("#777777"), weight: "bold", body)
   show math.equation: eq => eq
+  set math.equation(numbering: "(1)")
   show figure: fig => {
     show: pad.with(x: 1em)
     set image(width: 50%)
