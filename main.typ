@@ -6,8 +6,8 @@
 #let normal-size = 9pt
 #let large-size = 9pt
 
-#let font = "IBM Plex Sans"
-#let heading_font = "IBM Plex Sans"
+#let font = "Liberation Sans"
+#let heading_font = "Liberation Sans"
 #let mono_font = "DejaVu Sans Mono"
 
 #let settings = yaml("/settings.yml")
@@ -114,9 +114,9 @@
   show raw.where(block: true): txt => pad(
       left: 0.5em,
       block(
-        radius: 0.5em,
+        radius: 0em,
         stroke: luma(230),
-        fill: luma(245),
+        fill: luma(250),
         pad(
           left: 1em,
           right: 1em,

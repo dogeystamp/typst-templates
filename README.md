@@ -17,6 +17,10 @@ docs/
 
 ## Installation
 
+Install dependencies:
+
+- `ttf-liberation`
+
 Set up `docs/` as a git repo.
 
     mkdir docs
@@ -61,8 +65,6 @@ Example usage (this is test.typ in the above tree:)
 
 #source_code("test")
 ```
-
-Fonts should be included in Typst itself.
 
 Some settings are available in `main.typ`.
 
