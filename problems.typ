@@ -10,7 +10,7 @@
   stat: "incomplete",
   body
 ) = {
-  doc_template({
+  doc_template(title: title, {
     gen_preamble(
       title: title,
       authors: authors,

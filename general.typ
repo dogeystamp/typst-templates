@@ -9,7 +9,9 @@
   prefix: none,
   body
 ) = {
-  doc_template({
+  doc_template(
+  title: title,
+  {
     gen_preamble(title: title, authors: authors, suffix: suffix, prefix: prefix)
     body
   })

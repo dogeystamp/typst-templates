@@ -37,9 +37,7 @@
   text(size: 20pt, weight: "black", title, font: heading_font)
 }
 
-#let gen_authors(
-  authors: none,
-) = {
+#let author_string(authors: none) = {
   if authors == none {
     authors = (
       (
@@ -47,14 +45,19 @@
       ),
     )
   }
+
   let names = authors.map(author => author.name)
-  let author-string = if authors.len() == 2 {
+  return if authors.len() == 2 {
     names.join(" and ")
   } else {
     names.join(", ", last: ", and ")
   }
+}
 
-  text(author-string)
+#let gen_authors(
+  authors: none,
+) = {
+  text(author_string())
 }
 
 #let gen_preamble(
@@ -89,6 +92,7 @@
 // but does not do things like title, authors, etc.
 #let doc_template(
   paper-size: "us-letter",
+  title: "",
 
   // Content to wrap
   body,
@@ -130,6 +134,27 @@
   set page(
     paper: paper-size,
     margin: (top: 8%, rest: 10%),
+    footer-descent: 50%,
+    footer: [
+      #set text(size: 8pt, fill: luma(80))
+      #columns(3)[
+        #align(left)[
+          ©
+          #author_string()
+          #datetime.today().year()
+        ]
+        #colbreak()
+
+        #align(center)[
+          _ #title _
+        ]
+        #colbreak()
+
+        #align(right)[
+          #counter(page).display("1")
+        ]
+      ]
+    ],
   )
   set list(indent: 5pt, body-indent: 5pt)
   set enum(indent: 5pt, body-indent: 5pt)

@@ -3,6 +3,7 @@
 #import "main.typ": gen_preamble, doc_template, lref
 
 
+// chemical state indicators (use these as subscripts)
 #let aq = [$("aq")$]
 #let liq = [$("l")$]
 #let gaz = [$("g")$]
@@ -20,8 +21,7 @@
   prefix: none,
   body
 ) = {
-  // chemical state indicators (use these as subscripts)
-  doc_template({
+  doc_template(title: title, {
     gen_preamble(title: title, authors: authors, suffix: suffix, prefix: prefix)
     body
   })

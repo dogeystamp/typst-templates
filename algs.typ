@@ -8,13 +8,16 @@
   authors: none,
   body
 ) = {
-  doc_template({
-    gen_preamble(
-      title: title,
-      authors: authors,
-      prefix: [_Algorithm notes_]
-    )
+  doc_template(
+    title: title,
+    {
+      gen_preamble(
+        title: title,
+        authors: authors,
+        prefix: [_Algorithm notes_]
+      )
 
-    body
-  })
+      body
+    }
+  )
 }
