@@ -57,7 +57,7 @@
 #let gen_authors(
   authors: none,
 ) = {
-  text(author_string())
+  text(author_string(authors: authors))
 }
 
 #let gen_preamble(
@@ -77,7 +77,6 @@
           {
             [
               #{gen_authors(authors: authors)}
-
             ]
             suffix
         })
