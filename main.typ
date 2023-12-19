@@ -92,6 +92,8 @@
 #let doc_template(
   paper-size: "us-letter",
   title: "",
+  authors: none,
+  enable-footer: true,
 
   // Content to wrap
   body,
@@ -134,12 +136,12 @@
     paper: paper-size,
     margin: (top: 8%, rest: 10%),
     footer-descent: 50%,
-    footer: [
+    footer: if enable-footer [
       #set text(size: 8pt, fill: luma(80))
       #columns(3)[
         #align(left)[
           ©
-          #author_string()
+          #author_string(authors: authors)
           #datetime.today().year()
         ]
         #colbreak()
