@@ -104,14 +104,10 @@
   set math.equation(numbering: "(1)")
   show figure: fig => {
     show: pad.with(x: 1em)
+    show image: pad.with(y: 0.5em)
     set image(width: 50%)
     set align(center)
-    v(1em)
-    fig.body
-    if fig.has("caption") {
-      v(1em, weak: true)
-      fig.caption
-    }
+    fig
   }
   set table(inset: 10pt, stroke: 0.5pt + black)
   show heading: set text(font: heading_font, weight: "black")
