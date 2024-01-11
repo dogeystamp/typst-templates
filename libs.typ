@@ -4,7 +4,7 @@
 #import units: *
 #import prefixes: *
 
-#import "@preview/tablex:0.0.6": tablex
+#import "@preview/tablex:0.0.6": tablex, rowspanx, colspanx
 
 #let tablef = tablex.with(
   align: center + horizon,
