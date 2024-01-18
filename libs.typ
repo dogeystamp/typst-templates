@@ -42,3 +42,8 @@
 
   body
 }
+
+#let numbered_eq = (body) => {
+  set math.equation(numbering: "(1)")
+  body
+}
