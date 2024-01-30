@@ -99,7 +99,7 @@
   body,
 ) = {
   set text(size: normal-size, font: font, weight: "regular", lang: settings.lang)
-  show link: body => text(fill: rgb("#777777"), weight: "bold", body)
+  show link: text.with(fill: rgb("#5577bb"), weight: "bold")
   show math.equation: eq => eq
   show figure: fig => {
     show: pad.with(x: 1em)
