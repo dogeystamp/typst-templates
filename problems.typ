@@ -17,7 +17,7 @@
       prefix: status(stat: stat),
       suffix: {
         if (problem_url != none) {
-          [#link(problem_url)]
+          [#linebreak()#link(problem_url)]
         }
       }
     )
