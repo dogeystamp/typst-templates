@@ -101,8 +101,11 @@
   set text(size: normal-size, font: font, weight: "regular", lang: settings.lang)
   show link: text.with(fill: rgb("#5577bb"), weight: "bold")
   show math.equation: eq => eq
+  set figure.caption(position: top)
+  set figure(gap: 1em)
+  show figure.caption: emph
   show figure: fig => {
-    show: pad.with(x: 1em)
+    show: pad.with(x: 1em, y: 0.6em)
     show image: pad.with(y: 0.5em)
     set image(width: 50%)
     set align(center)
