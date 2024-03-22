@@ -4,11 +4,11 @@
 #import units: *
 #import prefixes: *
 
-#import "@preview/tablex:0.0.6": tablex, rowspanx, colspanx
-
-#let tablef = tablex.with(
+// this used to be an alias to styled tablex
+#let tablef = table.with(
   align: center + horizon,
-  auto-vlines: false
+  stroke: (x: none, y: 0.1em),
+  inset: (y: 0.75em)
 )
 
 #let appendices(body) = {
