@@ -78,6 +78,7 @@
             [
               #{gen_authors(authors: authors)}
             ]
+            linebreak()
             suffix
         })
       )
