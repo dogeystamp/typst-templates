@@ -1,9 +1,5 @@
 #import "/templates/main.typ": settings, font
 
-#import "@preview/metro:0.1.0": units, prefixes, num
-#import units: *
-#import prefixes: *
-
 // this used to be an alias to styled tablex
 #let tablef = table.with(
   align: center + horizon,
