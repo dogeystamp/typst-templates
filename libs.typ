@@ -7,6 +7,8 @@
   return $(num(nb) plus.minus qty(pe, "%")) unit(un)$
 }
 
+// chemistry
+#import "@preview/whalogen:0.1.0": ce
 
 // this used to be an alias to styled tablex
 #let tablef = table.with(
