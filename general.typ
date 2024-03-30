@@ -1,6 +1,6 @@
 // general document
 
-#import "main.typ": gen_preamble, doc_template, lref
+#import "main.typ": gen_preamble, doc_template, lref, source_code, status
 
 #let template(
   title: none,

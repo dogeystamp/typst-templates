@@ -1,7 +1,6 @@
 // templates for compsci problem documents outside of contests
 
-#import "main.typ": gen_preamble, doc_template, mono_font, lref
-#import "compsci.typ": source_code, status
+#import "main.typ": gen_preamble, doc_template, mono_font, lref, source_code, status
 
 #let template(
   title: none,
@@ -17,7 +16,7 @@
       prefix: status(stat: stat),
       suffix: {
         if (problem_url != none) {
-          [#linebreak()#link(problem_url)]
+          [#link(problem_url)]
         }
       }
     )
