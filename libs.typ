@@ -1,5 +1,13 @@
 #import "/templates/main.typ": settings, font
 
+#import "@preview/unify:0.5.0": num, qty, unit
+// percentage error quantity
+// (because both unify and metro currently can't parse percentages)
+#let pq(nb, un, pe) = {
+  return $(num(nb) plus.minus qty(pe, "%")) unit(un)$
+}
+
+
 // this used to be an alias to styled tablex
 #let tablef = table.with(
   align: center + horizon,
