@@ -1,18 +1,20 @@
 // templates for online lecture notes
 
-#import "main.typ": gen_preamble, doc_template, lref
+#import "../main.typ": gen_preamble, doc_template, mono_font, lref
 
 #let template(
   title: none,
   authors: none,
-  subtitle: [Index of resources],
+  lecture_url: none,
+  class: [Lecture notes],
   body
 ) = {
   doc_template(title: title, {
     gen_preamble(
       title: title,
       authors: authors,
-      prefix: [_#{subtitle}_],
+      prefix: [_#{class}_],
+      suffix: link(lecture_url)
     )
     body
   })
