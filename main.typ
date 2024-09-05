@@ -139,8 +139,8 @@
       #set text(size: 8pt, fill: luma(80))
       #columns(3)[
         #align(left)[
-          ©
-          #author_string(authors: authors)
+          //©
+          #author_string(authors: authors),
           #datetime.today().year()
         ]
         #colbreak()
