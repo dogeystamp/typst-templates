@@ -113,7 +113,11 @@
     fig
   }
   set table(inset: 10pt, stroke: 0.5pt + black)
-  show heading: set text(font: heading_font, weight: "black")
+  show heading: it => [
+	  #set text(font: heading_font, weight: "black")
+	  #text(it)
+	  #v(0.1em)
+  ]
   set heading(numbering: "1.")
   show raw.where(block: true): txt => pad(
       left: 0.5em,
@@ -156,7 +160,7 @@
       ]
     ],
   )
-  set list(indent: 5pt, body-indent: 5pt)
+  set list(indent: 5pt, body-indent: 5pt, marker: ("▪", "‣"))
   set enum(indent: 5pt, body-indent: 5pt)
 
   // Configure paragraph properties.
