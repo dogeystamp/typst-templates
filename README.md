@@ -19,7 +19,7 @@ docs/
 
 Install dependencies:
 
-- `ttf-liberation`
+- Nimbus Sans: `gsfonts` (name on Arch Linux)
 
 Set up `docs/` as a git repo.
 

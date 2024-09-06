@@ -6,8 +6,8 @@
 #let normal-size = 9pt
 #let large-size = 9pt
 
-#let font = "Liberation Sans"
-#let heading_font = "Liberation Sans"
+#let font = "Nimbus Sans"
+#let heading_font = "Nimbus Sans"
 #let mono_font = "DejaVu Sans Mono"
 
 #let settings = yaml("/settings.yml")
