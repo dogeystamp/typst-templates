@@ -53,3 +53,19 @@
   set math.equation(numbering: "(1)")
   body
 }
+
+// theorems, definitions, example environments
+#import "@preview/ctheorems:1.1.2": *
+// use `#show: thmrules` at the beginning of documents
+
+#let theorem = thmbox("theorem", "Theorem", fill: rgb("#eeffee"))
+#let corollary = thmplain(
+  "corollary",
+  "Corollary",
+  base: "theorem",
+  titlefmt: strong
+)
+#let definition = thmbox("definition", "Definition", inset: (x: 1.2em, top: 1em, bottom: 1em), stroke: 1pt + black)
+
+#let example = thmbox("example", "Example").with(numbering: none)
+#let proof = thmproof("proof", "Proof")
