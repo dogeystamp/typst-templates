@@ -55,7 +55,7 @@
 }
 
 // theorems, definitions, example environments
-#import "@preview/ctheorems:1.1.2": *
+#import "@preview/ctheorems:1.1.3": *
 // use `#show: thmrules` at the beginning of documents
 
 #let theorem = thmbox("theorem", "Theorem", fill: rgb("#eeffee"))
