@@ -99,7 +99,7 @@
   // Content to wrap
   body,
 ) = {
-  set text(size: normal-size, font: font, weight: "regular", lang: settings.lang)
+  set text(size: normal-size, font: font, weight: "regular", lang: settings.lang, hyphenate: auto)
   show link: text.with(fill: rgb("#5577bb"), weight: "bold")
   show math.equation: eq => eq
   set figure.caption(position: top)
@@ -155,7 +155,7 @@
         #colbreak()
 
         #align(right)[
-          #counter(page).display("1")
+          #context counter(page).display("1")
         ]
       ]
     ],
@@ -164,7 +164,7 @@
   set enum(indent: 5pt, body-indent: 5pt)
 
   // Configure paragraph properties.
-  set par(justify: true)
+  set par(justify: true, linebreaks: "optimized")
 
   // Display the article's contents.
   v(29pt, weak: true)
