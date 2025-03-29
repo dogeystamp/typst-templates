@@ -68,24 +68,28 @@
 ) = {
   pad(left: -2%, {
       gen_title(title: title)
-      v(13pt, weak: true)
-      pad(left: 1.5pt, prefix)
+      v(1.1em, weak: true)
+      pad(left: 1.5pt, [
+			#set text(size: 1.2em)
+			*#prefix*
+		])
       align(right,
         rect(
           width: 50%,
           stroke: none,
           {
-            [
-              #{gen_authors(authors: authors)}
-            ]
-            linebreak()
-            suffix
+          set text(size: 0.9em)
+          [
+            *#{gen_authors(authors: authors)}*
+          ]
+          linebreak()
+          suffix
         })
       )
-      v(10pt)
-    line(length: 100%, stroke: 1pt + rgb("#555555"))
+      v(2em, weak: true)
+    line(length: 100%, stroke: 1pt + rgb("#000000"))
   })
-  v(5%, weak: true)
+  v(2.5em, weak: true)
 }
 
 // this template sets up the document
@@ -119,6 +123,9 @@
 	  #v(0.1em)
   ]
   set heading(numbering: "1.")
+	show heading.where(level: 1): txt => {
+		txt
+	}
   show raw.where(block: true): txt => pad(
       left: 0.5em,
       block(
