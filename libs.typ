@@ -1,11 +1,12 @@
 #import "/templates/main.typ": settings, font
 
-#import "@preview/unify:0.5.0": num, qty, unit
+#import "@preview/unify:0.7.1": num, qty, unit
 // percentage error quantity
 // (because both unify and metro currently can't parse percentages)
 #let pq(nb, un, pe) = {
   return $(num(nb) plus.minus qty(pe, "%")) unit(un)$
 }
+#let unit = unit.with(per: "fraction-short")
 
 // chemistry
 #import "@preview/whalogen:0.3.0": ce
@@ -58,14 +59,21 @@
 #import "@preview/ctheorems:1.1.3": *
 // use `#show: thmrules` at the beginning of documents
 
-#let theorem = thmbox("theorem", "Theorem", fill: rgb("#eeffee"))
+#let theorem = thmbox("theorem", "Theorem", fill: rgb("#eeeeee"), radius: 0em)
 #let corollary = thmplain(
   "corollary",
   "Corollary",
   base: "theorem",
   titlefmt: strong
 )
-#let definition = thmbox("definition", "Definition", inset: (x: 1.2em, top: 1em, bottom: 1em), stroke: 1pt + black)
+#let definition = thmbox("definition", "Definition", inset: (x: 1.2em, top: 1em, bottom: 1em), stroke: 1pt + black, radius: 0em)
 
-#let example = thmbox("example", "Example").with(numbering: none)
+#let example = thmplain(
+  "example",
+  "Example",
+  titlefmt: underline,
+  inset: 1.25em,
+  radius: 0em,
+  stroke: 0.5pt + black
+)
 #let proof = thmproof("proof", "Proof")
