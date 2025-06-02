@@ -77,3 +77,13 @@
   stroke: 0.5pt + black
 )
 #let proof = thmproof("proof", "Proof")
+
+
+// big headings like book chapters
+#let big_heading = (x) => {
+  pagebreak()
+  v(-1.0em)
+  set text(size: 1.3em)
+  x
+  v(0.7em)
+}
